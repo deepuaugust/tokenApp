@@ -32,7 +32,7 @@ async function signup(signupData) {
         let available = await user.userNameAvailability();
         if (!available) {
             return new Response({
-                code: 200,
+                code: 201,
                 message: "UserName taken",
                 data: null,
                 err: null
@@ -74,7 +74,7 @@ async function login(loginData) {
         let userFromDb = await user.getByUserName(loginData.userName);
         if (!userFromDb) {
             return new Response({
-                code: 200,
+                code: 404,
                 message: "No such user in the system",
                 data: null,
                 err: null
@@ -84,7 +84,7 @@ async function login(loginData) {
         //check for creds
         if (!jwt.comparePassword(loginData.password, userFromDb.password)) {
             return new Response({
-                code: 200,
+                code: 201,
                 message: "Wrong userName/password",
                 data: null,
                 err: null

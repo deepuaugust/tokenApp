@@ -8,7 +8,6 @@ const { JWTsecret } = require('../config')
  */
 function createToken(details) {
     let token =  jwt.sign(details, JWTsecret, { expiresIn: 100000 });
-    console.log(token)
     return token
 }
 

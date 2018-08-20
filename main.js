@@ -50,13 +50,10 @@ mongo.connect()
 
 
 
+    app.listen(config.port, () => {
+        console.log(`App is running on port: ${config.port}`);
+    })
 
 
 
-
-
-
-app.listen(config.port, () => {
-    console.log(`App is running on port: ${config.port}`);
-
-})
+module.exports = app

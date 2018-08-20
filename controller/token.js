@@ -17,7 +17,12 @@ async function deleteToken(id){
         })
     }
     catch(err){
-        console.log(err)
+        return new Response({
+            code: 500,
+            message: "Something went wrong",
+            data: null,
+            err: err.message
+        })
     }
 }
 
@@ -33,7 +38,12 @@ async function getCount(id){
         })
     }
     catch(err){
-        console.log(err)
+        return new Response({
+            code: 500,
+            message: "Something went wrong",
+            data: null,
+            err: err.message
+        })
     }
 }
 
@@ -49,7 +59,12 @@ async function checkTokens(tokenid){
         })
     }
     catch(err){
-        console.log(err)
+        return new Response({
+            code: 500,
+            message: "Something went wrong",
+            data: null,
+            err: err.message
+        })
     }
 }
 
@@ -65,7 +80,12 @@ async function getTokens(id){
         })
     }
     catch(err){
-        console.log(err)
+        return new Response({
+            code: 500,
+            message: "Something went wrong",
+            data: null,
+            err: err.message
+        })
     }
 }
 

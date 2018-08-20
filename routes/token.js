@@ -54,12 +54,4 @@ router.post('/delete', async (req, res) => {
     res.status(response.code).send(response);
 })
 
-
-// router.get('/stats', async (req, res) => {
-//     res.status(200).send({
-//         message: "token stats route"
-//     })
-
-// })
-
 module.exports = router;
